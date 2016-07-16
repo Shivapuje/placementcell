@@ -145,286 +145,313 @@
 ?>
 
 <div class="container">
-<h2 class="line-border" style="text-align:center;width:1100px;height:70px;align:center;" align="center">Please fill up the following details.</h2>
-		<hr class="colorgraph">
-				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" class="block">
-							<div class="panel panel-primary">
-							<div class="panel-heading"><h3>Personal Information</h3></div>
-							<div class="panel-body">
-							<div class="row">
-							<div class="col-md-8">
+	<h2 class="line-border" style="text-align:center;width:1100px;height:70px;align:center;" align="center">Please fill up the following details.</h2>
+	<hr class="colorgraph">
+	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" class="block">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><h3>Personal Information</h3></div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+                        	<input type="text" name="fullName" id="fullName" class="form-control input-lg" placeholder="Full Name" tabindex="2">
+                        	<div class="error-text"><?php echo $fullNameErr; ?> </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="form-group">
+                        	<input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="3">
+                        	<div class="error-text"><?php echo $firstNameErr; ?> </div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+							<input type="text" name="middleName" id="middleName" class="form-control input-lg" placeholder="Middle Name" tabindex="4">
+							<div class="error-text"><?php echo $middleNameErr; ?> </div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+                        	<input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="5">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group">
+                        <input type="text" name="parent" id="parent" class="form-control input-lg" placeholder="Father/ Guardian Name" tabindex="6">
+                        <div class="error-text"><?php echo $parentErr; ?> </div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group">
+                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="dob" id="dob" class="form-control input-lg" placeholder="Date of Birth" tabindex="7">
+                        <div class="error-text"><?php echo $dobErr;?></div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group">
+                        <select name="gender" id="gender" class="form-control input-lg" placeholder="Select Your Gender" tabindex="8">
+                        	<option value="" disabled selected>Select Your Gender</option>
+                        	<option value="Male">Male</option>
+                        	<option value="Female">Female</option>
+                        	<option value="Other">Other</option>
+                        </select>	
+	                    <div class="error-text"><?php echo $genderErr;?></div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group">
+                        <input type="text" name="religion" id="religion" class="form-control input-lg" placeholder="Religion" tabindex="9">
+                        <div class="error-text"><?php echo $religionErr;?></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5">
+						<div class="form-group">
+                        	<input type="text" name="caste" id="caste" class="form-control input-lg" placeholder="Caste" tabindex="10">
+                        	<div class="error-text"><?php echo $casteErr;?></div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+                        	<input type="text" name="subCaste" id="subCaste" class="form-control input-lg" placeholder="sub-Caste (If any or leave it blank)" tabindex="11">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End of Personal Information panel-->
+
+		<!--Contact details panel-->
+		<div class="panel panel-info">
+			<div class="panel-heading"><h3>Contact Details</h3></div>
+			<div class="panel-body">
+				<div class="col-md-8">
+					<div class="form-group">
+                   		<input type="email" name="emailId" id="emailId" class="form-control input-lg" placeholder="Email-Id" tabindex="8">
+                    	<div class="error-text"><?php echo $emailIdErr; ?> </div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group">
+            	        <input type="email" name="alternateEmailId" id="alternateEmailId" class="form-control input-lg" placeholder="Alternate E-Mail Id" tabindex="9">
+                	    <div class="error-text"><?php echo $alternateEmailIdErr; ?> </div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group">
+            	        <input type="tel" name="contact" id="contact" class="form-control input-lg" placeholder="Contact Number (No need to include 0 or +91 )" tabindex="10">
+            	        <div class="error-text"><?php echo $contactErr; ?> </div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group">
+            	        <input type="tel" maxlength="11" name="alternateContact" id="alternateContact" class="form-control input-lg" placeholder="Alternate Contact Number (No need to include 0 or +91 )" tabindex="11">
+            	        <div class="error-text"><?php echo $alternateContactErr; ?> </div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group">
+            	    	<input type="text" name="nativePlace" id="nativePlace" class="form-control input-lg" placeholder="Hometown / Native Place" tabindex="12">
+            	    	<div class="error-text"><?php echo $nativePlaceErr; ?> </div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group">
+						<label for="permanentAddress"><h4>Permanent Address : </h4></label>
+            	        <textarea rows="05" style="resize:none;" name="permanentAddress" id="permanentAddress" class="form-control input-lg" tabindex="13"></textarea>
+            	        <div class="error-text"><?php echo $permanentAddressErr; ?> </div>
+					</div>
+				</div>
+			</div>
+		</div> 
+		<!--End of Contact details panel-->
+
+		<!--Study Details panel-->
+		<div class="panel panel-danger">
+			<div class="panel-heading" style="color:#112233;"><h3 style="color:#b3003b;">Study Information</h3></div>
+			<div class="panel-body">
+				<div class="panel" style="border-color:#112233;">
+					<div class="panel-heading"><h4 style="color:#008811;">S S L C</h4></div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-3">
 								<div class="form-group">
-                        			<input type="text" name="fullName" id="fullName" class="form-control input-lg" placeholder="Full Name" tabindex="2">
-                        			<div class="error-text"><?php echo $fullNameErr; ?> </div>
+									<input type="number" step="0.01" min="0" max="100" name="xPercentage" id="xPercentage" class="form-control input-lg" placeholder="10th Percentage" tabindex="20">
+									<div class="error-text"><?php echo $xPercentageErr; ?></div>
 								</div>
 							</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-3">
-									<div class="form-group">
-                        				<input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="3">
-                        				<div class="error-text"><?php echo $firstNameErr; ?> </div>
-									</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" name="xBoardofStudy" id="xBoardofStudy" class="form-control input-lg" placeholder="10th Board of Study" tabindex="20">
+									<div class="error-text"><?php echo $xBoardofStudyErr; ?></div>
 								</div>
-								<div class="col-sm-3">
-									<div class="form-group">
-										<input type="text" name="middleName" id="middleName" class="form-control input-lg" placeholder="Middle Name" tabindex="4">
-										<div class="error-text"><?php echo $middleNameErr; ?> </div>
-									</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<input type="text" onfocus="(this.type='month')" onblur="(this.type='text')" name="xYearofPass" id="xYearofPass" class="form-control input-lg" placeholder="10th Year of Passing" tabindex="20">
+									<div class="error-text"><?php echo $xYearofPassErr; ?></div>
 								</div>
-								<div class="col-sm-3">
-									<div class="form-group">
-                        				<input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="5">
-									</div>
 							</div>
+						</div>
+					</div>										
+				</div>
+				<div class="panel" style="border-color:#112233;">
+					<div class="panel-heading"><h4 style="color:#008811;">II<small>nd</small> P U C</h4></div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="form-group">
+									<input type="number" step="0.01" min="0" max="100" name="xiiPercentage" id="xiiPercentage" class="form-control input-lg" placeholder="12th Percentage" tabindex="20">	
+								</div>
 							</div>
-							<div class="col-md-8">
-									<div class="form-group">
-                        				<input type="text" name="parent" id="parent" class="form-control input-lg" placeholder="Father/ Guardian Name" tabindex="6"><div class="error-text"><?php echo $parentErr; ?> </div>
-									</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" name="xiiBoardofStudy" id="xiiBoardofStudy" class="form-control input-lg" placeholder="12th Board of Study" tabindex="20">
+								</div>
 							</div>
-							<div class="col-md-8">
-									<div class="form-group">
-                        				<input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="dob" id="dob" class="form-control input-lg" placeholder="Date of Birth" tabindex="7">
-                        				<div class="error-text"><?php echo $dobErr;?></div>
-									</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<input type="text" onfocus="(this.type='month')" onblur="(this.type='text')" name="xiiYearofPass" id="xiiYearofPass" class="form-control input-lg" placeholder="12th Year of Passing" tabindex="20">
+								</div>
 							</div>
-							<div class="col-md-8">
-									<div class="form-group">
-                        				<select name="gender" id="gender" class="form-control input-lg" placeholder="Select Your Gender" tabindex="8">
-                        					<option value="" disabled selected>Select Your Gender</option>
-                        					<option value="Male">Male</option>
-                        					<option value="Female">Female</option>
-                        					<option value="Other">Other</option>
-                        				</select>	
-                        				<div class="error-text"><?php echo $genderErr;?></div>
-									</div>
+						</div>
+					</div>										
+				</div>
+				<div class="panel" style="border-color:#112233;">
+					<div class="panel-heading"><h4 style="color:#008811;">Diploma</h4></div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="form-group">
+									<input type="number" step="0.01" min="0" max="100" name="diplomaPercentage" id="diplomaPercentage" class="form-control input-lg" placeholder="Diploma Aggregate" tabindex="20">
+								</div>
 							</div>
-							<div class="col-md-8">
-									<div class="form-group">
-                        				<input type="text" name="religion" id="religion" class="form-control input-lg" placeholder="Religion" tabindex="9">
-                        				<div class="error-text"><?php echo $religionErr;?></div>
-									</div>
-							</div><
-							<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" name="diplomaBoardofStudy" id="diplomaBoardofStudy" class="form-control input-lg" placeholder="Diploma Board of Study" tabindex="20">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<input type="text" onfocus="(this.type='month')" onblur="(this.type='text')" name="diplomaYearofPass" id="diplomaYearofPass" class="form-control input-lg" placeholder="Diploma Year of Passing" tabindex="20">
+								</div>
+							</div>
+						</div>
+					</div>										
+				</div>
+				<div class="panel" style="border-color:#112233;">
+					<div class="panel-heading"><h4 style="color:#008811;">Under Graduate</h4></div>
+						<div class="panel-body">
 							<div class="col-md-5">
-									<div class="form-group">
-                        				<input type="text" name="caste" id="caste" class="form-control input-lg" placeholder="Caste" tabindex="10">
-                        				<div class="error-text"><?php echo $casteErr;?></div>
-									</div>
-							</div>
-							<div class="col-md-4">
-									<div class="form-group">
-                        				<input type="text" name="subCaste" id="subCaste" class="form-control input-lg" placeholder="sub-Caste (If any or leave it blank)" tabindex="11">
-									</div>
-							</div>
-							</div>
-							</div>
-							</div>
-							<!--End of Personal Information panel-->
-
-							<!--Contact details panel-->
-							<div class="panel panel-info">
-							<div class="panel-heading"><h3>Contact Details</h3></div>
-							<div class="panel-body">
-							<div class="col-md-8">
-									<div class="form-group">
-                        				<input type="email" name="emailId" id="emailId" class="form-control input-lg" placeholder="Email-Id" tabindex="8">
-                        				<div class="error-text"><?php echo $emailIdErr; ?> </div>
-									</div>
-							</div>
-							<div class="col-md-8">
-									<div class="form-group">
-                        				<input type="email" name="alternateEmailId" id="alternateEmailId" class="form-control input-lg" placeholder="Alternate E-Mail Id" tabindex="9">
-                        				<div class="error-text"><?php echo $alternateEmailIdErr; ?> </div>
-									</div>
-							</div>
-							<div class="col-md-8">
-									<div class="form-group">
-                        				<input type="tel" name="contact" id="contact" class="form-control input-lg" placeholder="Contact Number (No need to include 0 or +91 )" tabindex="10">
-                        				<div class="error-text"><?php echo $contactErr; ?> </div>
-									</div>
-							</div>
-							<div class="col-md-8">
-									<div class="form-group">
-                        				<input type="tel" pattern='((\+*)((0[ -]+)*|(91 )*)(\d{12}+|\d{10}+))|\d{5}([- ]*)\d{6}' maxlength="11" name="alternateContact" id="alternateContact" class="form-control input-lg" placeholder="Alternate Contact Number (No need to include 0 or +91 )" tabindex="11">
-                        				<div class="error-text"><?php echo $alternateContactErr; ?> </div>
-									</div>
-							</div>
-							<div class="col-md-8">
-									<div class="form-group">
-                        				<input type="text" name="nativePlace" id="nativePlace" class="form-control input-lg" placeholder="Hometown / Native Place" tabindex="12">
-                        				<div class="error-text"><?php echo $nativePlaceErr; ?> </div>
-									</div>
-							</div>
-							<div class="col-md-8">
-									<div class="form-group">
-										<label for="permanentAddress"><h4>Permanent Address : </h4></label>
-                        				<textarea rows="05" style="resize:none;" name="permanentAddress" id="permanentAddress" class="form-control input-lg" tabindex="13"></textarea>
-                        				<div class="error-text"><?php echo $permanentAddressErr; ?> </div>
-									</div>
-							</div>
-							</div>
-							</div> 
-							<!--End of Contact details panel-->
-
-							<!--Study Details panel-->
-							<div class="panel panel-danger">
-								<div class="panel-heading" style="color:#112233;"><h3 style="color:#008811;">Study Information</h3></div>
-								<div class="panel-body">
-									<div class="panel" style="border-color:#112233;">
-										<div class="panel-heading"><h4 style="color:#008811;">S S L C</h4></div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-md-3">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="xPercentage" id="xPercentage" class="form-control input-lg" placeholder="10th Percentage" tabindex="20">
-														<div class="error-text"><?php echo $xPercentageErr; ?></div>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="form-group">
-														<input type="text" name="xBoardofStudy" id="xBoardofStudy" class="form-control input-lg" placeholder="10th Board of Study" tabindex="20">
-														<div class="error-text"><?php echo $xBoardofStudyErr; ?></div>
-													</div>
-												</div>
-												<div class="col-md-3">
-													<div class="form-group">
-														<input type="text" onfocus="(this.type='month')" onblur="(this.type='text')" name="xYearofPass" id="xYearofPass" class="form-control input-lg" placeholder="10th Year of Passing" tabindex="20">
-														<div class="error-text"><?php echo $xYearofPassErr; ?></div>
-													</div>
-												</div>
-											</div>
-										</div>										
-									</div>
-									<div class="panel" style="border-color:#112233;">
-										<div class="panel-heading"><h4 style="color:#008811;">II<small>nd</small> P U C</h4></div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-md-3">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="xiiPercentage" id="xiiPercentage" class="form-control input-lg" placeholder="12th Percentage" tabindex="20">	
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="form-group">
-														<input type="text" name="xiiBoardofStudy" id="xiiBoardofStudy" class="form-control input-lg" placeholder="12th Board of Study" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-3">
-													<div class="form-group">
-														<input type="text" onfocus="(this.type='month')" onblur="(this.type='text')" name="xiiYearofPass" id="xiiYearofPass" class="form-control input-lg" placeholder="12th Year of Passing" tabindex="20">
-													</div>
-												</div>
-											</div>
-										</div>										
-									</div>
-									<div class="panel" style="border-color:#112233;">
-										<div class="panel-heading"><h4 style="color:#008811;">Diploma</h4></div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-md-3">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="diplomaPercentage" id="diplomaPercentage" class="form-control input-lg" placeholder="Diploma Aggregate" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="form-group">
-														<input type="text" name="diplomaBoardofStudy" id="diplomaBoardofStudy" class="form-control input-lg" placeholder="Diploma Board of Study" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-3">
-													<div class="form-group">
-														<input type="text" onfocus="(this.type='month')" onblur="(this.type='text')" name="diplomaYearofPass" id="diplomaYearofPass" class="form-control input-lg" placeholder="Diploma Year of Passing" tabindex="20">
-													</div>
-												</div>
-											</div>
-										</div>										
-									</div>
-									<div class="panel" style="border-color:#112233;">
-										<div class="panel-heading"><h4 style="color:#008811;">Under Graduate</h4></div>
-										<div class="panel-body">
-											<div class="col-md-5">
-												<div class="form-group">
-													<select name="ugBranch" id="ugBranch" class="form-control input-lg" tabindex="20">
-														<option value="" disabled selected>Select Your UG Branch</option>
-														<option value="cs">Computer Science and Engg.</option>
-
-													</select>
-												</div>
-											</div>
-											<hr width="100%">
-											<label for="ug1sem"><strong>1st to 8th sem percentages (Enter 0 if don't know)</strong></label>
-											<div class="row">
-												<div class="col-md-2">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="ug1sem" id="ug1sem" class="form-control input-lg" placeholder="1st sem" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-2">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="ug2sem" id="ug2sem" class="form-control input-lg" placeholder="2nd sem" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-2">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="ug3sem" id="ug3sem" class="form-control input-lg" placeholder="3rd sem" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-2">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="ug4sem" id="ug4sem" class="form-control input-lg" placeholder="4th sem" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-2">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="ug5sem" id="ug5sem" class="form-control input-lg" placeholder="5th sem" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-2">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="ug6sem" id="ug6sem" class="form-control input-lg" placeholder="6th sem" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-2">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="ug7sem" id="ug7sem" class="form-control input-lg" placeholder="7th sem" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-2">
-													<div class="form-group">
-														<input type="number" step="0.01" min="0" max="100" name="ug8sem" id="ug8sem" class="form-control input-lg" placeholder="8th sem" tabindex="20">
-													</div>
-												</div>
-											</div>
-											<hr size="10">
-											<div class="row">
-												<div class="col-md-6">
-													<div class="form-group">
-														<input type="text" name="diplomaBoardofStudy" id="diplomaBoardofStudy" class="form-control input-lg" placeholder="Diploma Board of Study" tabindex="20">
-													</div>
-												</div>
-												<div class="col-md-3">
-													<div class="form-group">
-														<input type="text" onfocus="(this.type='month')" onblur="(this.type='text')" name="ugYearofPass" id="ugYearofPass" class="form-control input-lg" placeholder="Diploma Year of Passing" tabindex="20">
-													</div>
-												</div>
-											</div>
-										</div>										
-									</div>
-								</div>
-							</div>
-							<hr class="colorgraph"><br>
-							<div class="col-md-8">
 								<div class="form-group">
-									<button class="btn btn-primary btn-lg" type="submit" name="submit" value="submit"></button>
+									<select name="ugBranch" id="ugBranch" class="form-control input-lg" tabindex="20">
+										<option value="" disabled selected>Select Your UG Branch</option>
+										<option value="cse">Computer Science and Engg. (CSE)</option>
+
+									</select>
 								</div>
 							</div>
-				</form>
-
-</div>
-<br><br><br><br>
-<?php
-	include 'footer.php'; ?>
+							<hr width="100%">
+							<label for="ug1sem"><strong>1st to 8th sem percentages (Enter 0 if you don't know)</strong></label>
+								<div class="row">
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="number" step="0.01" min="0" max="100" name="ug1sem" id="ug1sem" class="form-control input-lg" placeholder="1st sem" tabindex="20">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="number" step="0.01" min="0" max="100" name="ug2sem" id="ug2sem" class="form-control input-lg" placeholder="2nd sem" tabindex="20">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="number" step="0.01" min="0" max="100" name="ug3sem" id="ug3sem" class="form-control input-lg" placeholder="3rd sem" tabindex="20">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="number" step="0.01" min="0" max="100" name="ug4sem" id="ug4sem" class="form-control input-lg" placeholder="4th sem" tabindex="20">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="number" step="0.01" min="0" max="100" name="ug5sem" id="ug5sem" class="form-control input-lg" placeholder="5th sem" tabindex="20">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="number" step="0.01" min="0" max="100" name="ug6sem" id="ug6sem" class="form-control input-lg" placeholder="6th sem" tabindex="20">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="number" step="0.01" min="0" max="100" name="ug7sem" id="ug7sem" class="form-control input-lg" placeholder="7th sem" tabindex="20">
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input type="number" step="0.01" min="0" max="100" name="ug8sem" id="ug8sem" class="form-control input-lg" placeholder="8th sem" tabindex="20">
+										</div>
+									</div>
+								</div>
+								<hr size="10">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<input type="number" step="1" min="0" max="50" name="ugTotalBacklogs" id="ugTotalBacklogs" class="form-control input-lg" placeholder="Total Number of Backlogs in UG" tabindex="20">
+											<div class="error-text"><?php echo $ugTotalBacklogsErr; ?></div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<input type="number" step="1" min="0" max="100" name="ugCurrentBacklogs" id="ugCurrentBacklogs" class="form-control input-lg" placeholder="Current Backlogs in UG" tabindex="20">
+											<div class="error-text"><?php echo $ugCurrentBacklogsErr; ?></div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<input type="text" onfocus="(this.type='month')" onblur="(this.type='text')" name="ugYearofPass" id="ugYearofPass" class="form-control input-lg" placeholder="UG Year of Passing" tabindex="20">
+											<div class="error-text"> <?php echo $ugYearofPassErr; ?></div>
+										</div>
+									</div>
+								</div>
+								<hr size="10">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<select name="allotmentThrough" id="allotmentThrough" class="form-control input-lg">
+												<option value="" disabled selected>Allotment Through</option>
+												<option value="management">Management</option>
+												<option value="cet">CET</option>
+												<option value="comed-k">COMED-K</option>
+											</select>
+											<div class="error-text"> <?php echo $allotmentThroughErr; ?> </div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="number" maxlength="6" min="1" max="100000" name="rank" id="rank" class="form-control input-lg" placeholder="Enter your Engg. CET / COMED-K / Any other Rank">
+										</div>
+									</div>
+								</div>
+							</div>										
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr class="colorgraph"><br>
+			<div class="form-group" align="right" style="">
+				<button class="btn btn-outline btn-lg btn-primary" type="submit" name="submit" value="submit">Register</button>
+			</div>			
+		</form>
+	</div>
+	<br><br><br><br>
+	<?php
+		include 'footer.php';
+	?>
 </body>
 </html>
