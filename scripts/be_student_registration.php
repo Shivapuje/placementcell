@@ -448,10 +448,10 @@
 				<button class="btn btn-outline btn-lg btn-primary" type="submit" name="submit" value="submit">Register</button>
 			</div>			
 		</form>
+		<br><br><br><br>
+		<?php
+			include 'footer.php';
+		?>
 	</div>
-	<br><br><br><br>
-	<?php
-		include 'footer.php';
-	?>
 </body>
 </html>

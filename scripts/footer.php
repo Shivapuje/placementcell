@@ -9,10 +9,10 @@
         <link rel="stylesheet" type="text/css" href="../css/defined.css">
     </head>
 <body>
-	<div class="footer">
+	<div class="footer container-fluid top-right-left">
 		<div style="font-size:18px;">
 			<?php echo "<p>All Rights Reserved &copy; " . date("Y") . "";  ?>
-				<strong><a href="../index.php">Placementcell Inc.</a></strong> |  Made with <img src="../media/heart.png" height="25" width="25"> in Banglore.
+				<strong><a href="../index.php">Placementcell Inc.</a></strong> |  Made with <span class="glyphicon glyphicon-heart-empty" style="color:red;" aria-hidden="true"></span> in Banglore.
 				
 		</div>
 	</div>
