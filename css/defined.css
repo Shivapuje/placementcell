@@ -24,8 +24,7 @@ ul.topnav li a {
 }
 
 ul.topnav li a:hover.active {
-  background-color: #fff;
-  color:#3b004d; 
+  opacity: 0.2;
  }
 
 ul.topnav li a:hover:not(.active) {

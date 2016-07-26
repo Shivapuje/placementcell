@@ -25,6 +25,10 @@
       </nav>
     </div> 
   <!--Navigation bar ends-->
+
+  <div class="container">
+    <div class=""></div>
+  </div>
     <div class="container">
       <div class="row">
       <div class="col-md-7 line-border" style="width:700px; font-family: 'Exo', sans-serif;">
