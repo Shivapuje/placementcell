@@ -143,10 +143,23 @@
 	}
 
 ?>
-
+<div class="container-fluid header">
+      <nav class="navbar navbar-inverse">
+          <ul class="topnav nav nav-pills">
+            <li><b style="font-size:30px;color:#ffffff;">Placementcell</b></li>
+              <li class="right"><a class="active" href="#">Home</a></li>
+              <li class="right"><a href="#collegeBlog">College Blog</a></li>
+              <li class="right"><a href="#contact">Contact Us</a></li>
+              <li class="right"><a href="#about">About Us</a></li>
+              <li class="right"><a href="#about">Partners</a></li>
+          </ul>
+      </nav>
+    </div> 
+  <!--Navigation bar ends-->
+    <br><br><br>
 <div class="container">
 	<div align="center">
-		<h2 class="line-border" style="text-align:center;width:80%;height:5%;align:center;">Please fill up the following details.</h2>
+		<h2 class="line-border" style="text-align:center;width:80%;align:center;">Please fill up the following details.</h2>
 	</div>
 	<hr class="colorgraph">
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" class="block">
@@ -358,7 +371,8 @@
 									</select>
 								</div>
 							</div>
-							<hr width="100%">
+							<br><br><br>
+							<hr>
 							<label for="ug1sem"><strong>1st to 8th sem percentages (Enter 0 if you don't know)</strong></label>
 								<div class="row">
 									<div class="col-md-2">
