@@ -10,72 +10,64 @@
         <link rel="stylesheet" type="text/css" href="css/defined.css">
         <link href='https://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> 
         <link href='https://fonts.googleapis.com/css?family=Exo:400,800' rel='stylesheet' type='text/css'>
-    </head>
+  
+		<link rel="stylesheet" href="font-aw/css/font-awesome.min.css">
+		<link rel="stylesheet" href="font-aw/css/font-awesome.css">
+		<script src="js/jquery.min.js"> </script>
+		<script src="js/jquery-ui.min.js"> </script>
+		<script src="js/jquery-ui.js"> </script>
+		<script src="js/bootstrap.min.js"> </script>
+</head>
+
 <body>
-  <div class="container-fluid header">
-      <nav class="navbar navbar-inverse">
-          <ul class="topnav nav nav-pills">
-            <li><b style="font-size:30px;color:#ffffff;">Placementcell</b></li>
-              <li class="right"><a class="active" href="#">Home</a></li>
-              <li class="right"><a href="#collegeBlog">College Blog</a></li>
-              <li class="right"><a href="#contact">Contact Us</a></li>
-              <li class="right"><a href="#about">About Us</a></li>
-              <li class="right"><a href="#about">Partners</a></li>
-          </ul>
-      </nav>
-    </div> 
-  <!--Navigation bar ends-->
-    <br><br><br>
-  <div class="container">
-          <div class="panel panel-danger" style="font-family: 'Exo', sans-serif;">
-              <div class="panel-heading "><h2>STACKUP. LOAD UP. HIRED UP.</h2></div>
-              <div class="panel-body">
-                  <div class="row">
-                  <div class="col-md-4">
-                  <p style="color:#7856ca;">A platform to stack your pile of achievements, load them on your profile and
-                    Boooom - get picked by big-shops in the industry</p>
-                  </div>
-                  
-                <div class="col-md-6 col-md-5">
-    			<div class="thumbnail">
-      				<div class="caption">
-        				<div align="center"><h3>Student Login</h3></div>
-        				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh 	ultricies vehicula ut id elit.</p>
-        					<div class="row">
-                                <form method="post" action="scripts/verify.php">
-                                    <div class="row">
-                                        <div class="col-md-6 col-xs-4 col-offset-3">
-                                            <input type="text" class="form-control input-lg" name="usn" id="usn" placeholder="Enter Your USN" required>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <button type="submit" class="btn btn-primary btn-lg btn-outline">Dig-In</button>
-                                        </div>
-                                        
-                                    </div>
-                                </form>
-        					</div>
-      				
-                    </div>
-                    </div>
-    			</div>
-  			</div>
-        </div>
-    </div>
-</div>
-  <div class="container">
-    <div class="panel panel-primary" style="border-color:#ee13f1;">
-      <div class="panel-heading-custom">
-        <h3>Companies which are affiliated with us</h3>
-      </div>
-      <div class="panel-body">
+    <div class="homeparallax">
         
-      </div>
-      <div class="panel-footer-customized" style="o">
-        <h4 align="right"><span class="glyphicon glyphicon-plus">&nbsp;<strong>50</strong>&nbsp;More and Counting..</span></h4>
-      </div>
+        <div class="heading">
+            <h1>Placementcell</h1>
+        </div>
+        <div class="btn-signin">
+            <button class="btn btn-lg btn-outline btn-info" style="width:150px;height:70px;">Sign In</button>
+        </div>
+        <div class="btn-about">
+            <button class="btn btn-lg btn-outline btn-success" style="width:150px;height:70px;">About</button>
+        </div>
+     
     </div>
+    
+        
+                
+
+<h2 style="font-family:Times New Roman Bold Italic;text-align=left;margin-left:70px;margin-top:60px;"><font size="6">stackUp.loadUp.hiredUp.
+
+<p style="margin-left:5px;margin-top:10px;margin-bottom:120px;" ><font  face="Trebuchet MS Italic" size="4" color="white">"A platform to stack your pile of acheivments<br>load them on your profile and "BOOM"-get picked by your dream companies."</p>
+
+<form class="form-inline">
+  <div class="form-group">
+    <label class="sr-only">Profile</label>
   </div>
+  <div class="form-group">
+    <label for="inputPassword2" class="sr-only">Enter USN</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Enter USN" style="margin-left:350px;margin-bottom:50px;">
   </div>
+  <button type="submit" class="btn btn-default" style="margin-bottom:50px;">Login In</button>
+</form>
+		
+		</div>
+
+
+<!--division for companany slideshow-->
+
+<div class="container-fluid" style="margin-top:0px;margin-bottom:180px;background-color:#e6efef" >
+<img src="1022_Microsoft.jpg" style="width:1300px;height:180px;margin-left:-15px;">
+
+
+
+</div>
+
+
+
+
+      
       <?php include 'scripts/footer.php';?>
 </body>
 </html>

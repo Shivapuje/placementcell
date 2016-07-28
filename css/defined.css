@@ -1,9 +1,40 @@
-
-body {
-  font-family: 'Vollkorn', serif;
-
+html, body {
+    height: 100%;
+    margin: 0;
 }
-
+.heading {
+     position: relative;
+    float: left;
+    top: 50px;
+    left : 50px;
+}
+.btn-about {
+    position: relative;
+    float: right;
+    top: 50px;
+    right: 80px;
+}
+.btn-signin {
+    position: relative;
+    float: right;
+    top: 50px;
+    right: 50px;
+}
+.hometitle {
+    font-family: 'Vollkorn', serif;
+    font-size: 10px;
+    text-align: left;
+}
+.homeparallax {
+    background-image: url('../media/laptop-wallpaper.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgba(255,0,0,0.1);
+    height: 100%;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.3);  
+}
 .header {
     position:fixed;
     padding: 1px;
