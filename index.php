@@ -3,16 +3,10 @@
     <head>
         <title>Welcome to the Placementcell</title>
         <meta name="viewport" content="width=device-width, intial-scale=1"> 
-        <link rel="stylesheet" href="css/bootstrap-theme.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/defined.css">
         <link href='https://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> 
         <link href='https://fonts.googleapis.com/css?family=Exo:400,800' rel='stylesheet' type='text/css'>
-  
-		<link rel="stylesheet" href="font-aw/css/font-awesome.min.css">
-		<link rel="stylesheet" href="font-aw/css/font-awesome.css">
 		<script src="js/jquery.min.js"> </script>
 		<script src="js/jquery-ui.min.js"> </script>
 		<script src="js/jquery-ui.js"> </script>
@@ -21,53 +15,28 @@
 
 <body>
     <div class="homeparallax">
+        <div class="homeparallaxcolor">
         
-        <div class="heading">
-            <h1>Placementcell</h1>
-        </div>
+        <div class="heading">Placementcell</div>
         <div class="btn-signin">
-            <button class="btn btn-lg btn-outline btn-info" style="width:150px;height:70px;">Sign In</button>
+            <button class="btn btn-lg btn-outline btn-custom1" style="width:130px;height:55px;">Sign In</button>
         </div>
         <div class="btn-about">
-            <button class="btn btn-lg btn-outline btn-success" style="width:150px;height:70px;">About</button>
+            <button class="btn btn-lg btn-outline btn-custom1" style="width:130px;height:55px;">About</button>
         </div>
-     
+        <div for="usn" class="usn-block" align="center">
+            <form method="post" action="scripts/verify.php">
+                <div class="form-group">
+                    <input type="text" name="usn" id="usn" class="input-lg form-control" placeholder="Enter Your USN here" autofocus required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-outline btn-custom1 btn-lg">Lets Roll</button>
+                </div>
+            </form>
+        </div>
     </div>
-    
-        
-                
-
-<h2 style="font-family:Times New Roman Bold Italic;text-align=left;margin-left:70px;margin-top:60px;"><font size="6">stackUp.loadUp.hiredUp.
-
-<p style="margin-left:5px;margin-top:10px;margin-bottom:120px;" ><font  face="Trebuchet MS Italic" size="4" color="white">"A platform to stack your pile of acheivments<br>load them on your profile and "BOOM"-get picked by your dream companies."</p>
-
-<form class="form-inline">
-  <div class="form-group">
-    <label class="sr-only">Profile</label>
-  </div>
-  <div class="form-group">
-    <label for="inputPassword2" class="sr-only">Enter USN</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Enter USN" style="margin-left:350px;margin-bottom:50px;">
-  </div>
-  <button type="submit" class="btn btn-default" style="margin-bottom:50px;">Login In</button>
-</form>
-		
-		</div>
-
-
+        </div>
 <!--division for companany slideshow-->
-
-<div class="container-fluid" style="margin-top:0px;margin-bottom:180px;background-color:#e6efef" >
-<img src="1022_Microsoft.jpg" style="width:1300px;height:180px;margin-left:-15px;">
-
-
-
-</div>
-
-
-
-
-      
-      <?php include 'scripts/footer.php';?>
+<?php include 'scripts/footer.php';?>
 </body>
 </html>
