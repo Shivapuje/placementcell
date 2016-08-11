@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+?>
 <html lang="en">
 <head>
 	<title>Registration | PlacementCell.com</title>
@@ -12,13 +15,14 @@
 <body bgcolor="#ffbf80">
 <?php
 	include 'validate.php';
-	$usn = $fullName = $firstName = $middleName = $lastName = $parent = $emailId = $alternateEmailId = NULL;
+        $usn = $_SESSION["usn"];
+	$fullName = $firstName = $middleName = $lastName = $parent = $emailId = $alternateEmailId = NULL;
 	$contact = $alternateContact = $gender = $dob = $xPercentage = $xYearofPass = $xBoardofStudy = NULL;
 	$xiiPercentage = $xiiBoardofStudy = $xiiYearofPass = $diplomaPercentage = $diplomaYearofPass = $diplomaBoardofStudy = NULL;
 	$ugBranch = $ug1sem = $ug2sem = $ug3sem = $ug4sem = $ug5sem = $ug6sem = $ug7sem = $ug8sem = $ugAggregate = $ugYearofPass = NULL;
 	$ugTotalBacklogs = $ugCurrentBacklogs = $nativePlace = $permanentAddress = $allotmentThrough = $rank = $religion = $caste = $subCaste = NULL;
 
-	$usnErr = $fullNameErr = $firstNameErr = $middleNameErr = $parentErr = $emailIdErr = $alternateEmailIdErr = NULL;
+	$fullNameErr = $firstNameErr = $middleNameErr = $parentErr = $emailIdErr = $alternateEmailIdErr = NULL;
 	$contactErr = $alternateContactErr = $genderErr = $dobErr = $xPercentageErr = $xYearofPassErr = $xBoardofStudyErr = NULL;
 	$ugBranchErr = $ug1semErr = $ug2semErr = $ug3semErr = $ug4semErr = $ug5semErr = $ug6semErr = $ug7semErr = $ug8semErr = $ugYearofPassErr = NULL;
 	$ugTotalBacklogsErr = $ugCurrentBacklogsErr = $nativePlaceErr = $permanentAddressErr = $allotmentThroughErr = $religionErr = $casteErr = NULL;
@@ -26,13 +30,7 @@
 	$emptyFieldErrorFlag = 0;
 
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
-		if (empty($_POST["usn"])) {
-			$usnErr = "USN is Required";
-			$emptyFieldErrorFlag = 1;
-		}
-		else{
-			$usn = test_input($_POST["usn"]);
-		}
+		
 		if (empty($_POST["fullName"])) {
 			$fullNameErr = "Please enter your full name";
 			$emptyFieldErrorFlag = 1;
@@ -147,7 +145,7 @@
       <nav class="navbar navbar-inverse">
           <ul class="topnav nav nav-pills">
             <li><b style="font-size:30px;color:#ffffff;">Placementcell</b></li>
-              <li class="right"><a class="active" href="#">Home</a></li>
+            <li class="right"><a class="active" href="../index.php">Home</a></li>
               <li class="right"><a href="#collegeBlog">College Blog</a></li>
               <li class="right"><a href="#contact">Contact Us</a></li>
               <li class="right"><a href="#about">About Us</a></li>
@@ -163,6 +161,9 @@
 	</div>
 	<hr class="colorgraph">
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" class="block">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Entered USN is : <Strong><?php echo $usn; ?></strong></h3></div>
+            </div>
 		<div class="panel panel-primary">
 			<div class="panel-heading"><h3>Personal Information</h3></div>
 			<div class="panel-body">

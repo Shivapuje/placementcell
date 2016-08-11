@@ -2,43 +2,108 @@ html, body {
     height: 100%;
     margin: 0;
 }
+
+input.uppercase {
+    text-transform: uppercase;
+}
+.login-parallax {
+    background: url('../media/laptop-wallpaper.jpg')    ;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 94.6%;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+.container.content {
+    border:#34221c; 
+    background-color: rgba(255, 229, 255,0.5); 
+    font-size: 20px;    
+    padding: 45px;
+    border: rgba(0,10,0,0.2) solid;
+    border-width: 0.4px;
+    box-shadow: 5px 5px 19px rgba(0,100,225,0.9);
+}
+.content > p {
+ color: rgba(0,9,0,1.0);
+ font-style: oblique;
+ text-shadow : -0.1px 0.1px 0.5px rgba(0,30,255,0.9);
+}
+.login {
+    position: absolute;
+    bottom: 40%;
+    left: 40%;
+    font-variant-caps: small-caps;
+    background-color:rgba(255,255,255,0.4);
+    padding: 30px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.9);;
+    box-shadow: 15px 15px 25px rgba(255,229,255,0.5), -15px -15px 25px rgba(255,229,255,0.5);
+    overflow: hidden;
+}
+.login button {
+    border-radius: 50%;
+    
+}
+.caption .text {
+    color: white;
+    text-align: center;
+    color:darkmagenta;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.6);
+}
+
+.thumbnail {
+    box-shadow: 7px 7px 9px rgba(51, 0, 51, 0.4);   
+}
+
+.thumbnail .imagesize {
+    width: 200px;
+    height: 120px;
+}
+
 .usn-block {
     position: absolute;
-    bottom: 30px;
-    right: 40%;
-    background-color:rgba(128, 0, 128,0.2);
+    bottom: 3%;
+    left: 40%;
+    background-color:rgba(0, 0, 0,0.4);
     padding: 30px;
     border-radius: 5px;
     border-width: 3px;
     border-style: solid;
-    border-color: #660066;
-    box-shadow: 7px 7px 9px rgba(51, 0, 51, 0.4);
+    border-color: rgba(0,0,0,0.9);;
+    box-shadow: 7px 7px 9px rgba(0, 0, 0, 0.4);
 }
 
+.company {
+    align-self: center;
+    box-shadow: 1px 10px 9px rgba(0,0,0,0.9);
+}
 .heading {
     position: relative;
     float: left;
-    top: 50px;
-    left : 50px;
+    top: 2%;
+    left : 2%;
     font-family: 'Vollkorn', serif;
-    font-style: bold;
+    font-style: oblique;
     font-stretch: expanded;
     font-size: 55px;
-    color: rgb(255,255,255);
-    text-shadow: 1px -5px 2px rgba(128,0,128,0.8);
-    
+    color: rgba(0,0,0,0.7);
+    text-shadow: 2px -4px 4px rgba(0,0,0,0.8);
 }
 .btn-about {
     position: relative;
     float: right;
-    top: 50px;
-    right: 80px;
+    top: 3.5%;
+    right: 4.8%;
 }
 .btn-signin {
     position: relative;
     float: right;
-    top: 50px;
-    right: 50px;
+    top: 3.5%;
+    right: 2.3%;
 }
 .hometitle {
     font-family: 'Vollkorn', serif;
@@ -46,18 +111,29 @@ html, body {
     text-align: left;
 }
 .homeparallax {
-    background-image: url('../media/laptop-wallpaper.jpg');
+    background: url('../media/laptop-wallpaper.jpg');
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+    z-index: 1;
 }
-.homeparallaxcolor {
-    
-    z-index: px;
+
+.homeparallaxbottom {
+    background: url('../media/shutterstock_62093011.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 40px;
+    width: 100%;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+    z-index: 1;
+    overflow :hidden;
 }
+
 .header {
     position:fixed;
     padding: 1px;
@@ -145,7 +221,7 @@ ul.topnav li.right {float: right;}
 }
 .colorgraph {
   height: 15px;
-  border-top: 1;
+  border-top: 1px;
   background: #111;
   border-radius: 5px;
   background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
@@ -154,11 +230,11 @@ ul.topnav li.right {float: right;}
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 .footer {
-    padding: 10px;
-    height: 50px;
+   padding: 10px;
+   height: 50px;
    background: #00134d;
    color: #ffffff;
-    text-align: center;
+   text-align: center;
 }
 
 .error-text {
@@ -247,13 +323,17 @@ ul.topnav li.right {float: right;}
 }
 
 .btn-custom1.btn-outline {
-    color: #4d004d;
-    border-color: #4d004d;
+    color: #000;
+    border-color: #000;
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 5px -6px 5px rgba(133,122,0, 0.4);
 }
 
 .btn-custom1.btn-outline:hover {
     color: #fff;
-    background: rgba(129, 0, 129, 0.7);;
-    transition-duration: .2s;
+    background: rgba(0, 0, 0, 0.9);;
+    transition-duration: .25s;
     border-color: #000;
+    box-shadow: 0 0 0 rgba(133,122,0, 0.4);
 }
